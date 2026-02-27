@@ -1,0 +1,67 @@
+:root{
+    --darkmode_bg: #111213;
+    --darkmode_text: #FFFFFF;
+    --darkmode_clr_primary: #0065FF;
+}
+body{
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkmode_bg);
+    color: var(--darkmode_text);
+}
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+header strong{
+    font-size: 2rem;
+}
+header img{
+    filter: invert();
+    width: 2rem;
+    margin-left: 15rem;
+}
+nav{
+    display: flex;
+}
+ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+li{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.start-button{
+    background-color: var(--darkmode_clr_primary);
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 0 12px 4px #0065FF80;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10rem;
+    margin-bottom: 0;
+}
+.hero p{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 0;
+    font-size: 2.5rem;
+}
