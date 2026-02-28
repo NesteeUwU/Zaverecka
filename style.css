@@ -2,6 +2,7 @@
     --darkmode_bg: #111213;
     --darkmode_text: #FFFFFF;
     --darkmode_clr_primary: #0065FF;
+    --darkmode-clr-about: #2954A2;
 }
 body{
     font-family: "Nunito", sans-serif;
@@ -64,4 +65,22 @@ h1{
     font-weight: 500;
     margin-top: 0;
     font-size: 2.5rem;
+}
+.about{
+    background-color: var(--darkmode-clr-about);
+    padding: 2rem;
+    text-align: center;
+}
+h2{
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+.about p{
+    margin-bottom: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-size: 1.25rem;
 }
