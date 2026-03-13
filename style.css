@@ -10,21 +10,33 @@ body{
     flex-direction: column;
     background-color: var(--darkmode_bg);
     color: var(--darkmode_text);
+    position: relative;
 }
 header{
     width: 100%;
     display: flex;
+    backdrop-filter: blur(20px);
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 2;
 }
 header strong{
     font-size: 2rem;
 }
-header img{
+#theme-toggle{
     filter: invert();
     width: 2rem;
     margin-left: 15rem;
+    transition: all 0.3s;
+}
+#theme-toggle:hover{
+    transform: rotate(90deg);
 }
 nav{
     display: flex;
@@ -35,9 +47,19 @@ ul{
     align-items: center;
     gap: 2rem;
 }
-li{
+header a{
+    color: var(--darkmode_text);
+    text-decoration: none;
+}
+a, li{
     text-transform: uppercase;
     font-weight: bold;
+    transition: all 0.05s ease-in-out;
+}
+li:hover{
+    transform: scale(1.05);
+    border-bottom: var(--darkmode_text) solid 2px;
+    transform: translateY(1);
 }
 .start-button{
     background-color: var(--darkmode_clr_primary);
@@ -57,7 +79,8 @@ h1{
     font-size: 6rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin-top: 10rem;
+    text-align: center;
+    margin-top: 15rem;
     margin-bottom: 0;
 }
 .hero p{
@@ -70,6 +93,19 @@ h1{
     background-color: var(--darkmode-clr-about);
     padding: 2rem;
     text-align: center;
+    z-index: 1;
+}
+.about h2{
+    font-size: 3.5rem;
+}
+.wave{
+    width: 100%;
+    margin-top: 14rem;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+}
+#wave{
+    scale: 5.3;
 }
 h2{
     text-transform: uppercase;
@@ -79,7 +115,7 @@ h2{
     margin: 2rem;
 }
 .about p{
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     padding-left: 5rem;
     padding-right: 5rem;
     font-size: 1.25rem;

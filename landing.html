@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Main page of Konfide. Learning revised.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -13,12 +14,12 @@
 <body>
     <header class="nav-bar">
         <strong>Konfide</strong>
-        <img src="https://www.svgrepo.com/show/525081/sun-2.svg" alt="light-mode toggle">
+        <img src="https://www.svgrepo.com/show/525081/sun-2.svg" alt="light-mode toggle" id="theme-toggle">
         <nav>
             <ul>
-                <li>about</li>
-                <li>language</li>
-                <li class="start-button">start learning</li>
+                <a href="#about"><li>about</li></a>
+                <a href="#"><li>language</li></a>
+                <a href="#"><li class="start-button">start learning</li></a>
             </ul>
         </nav>
     </header>
@@ -27,7 +28,9 @@
             <h1>speak without fear.</h1>
             <p>Vocabulary that sticks. Speaking that flows.</p>
         </section>
-        <img src="Wave-landing.svg" alt="blue wave border" id="wave">
+        <div class="wave">
+            <img src="Wave-landing.svg" alt="blue wave border" id="wave">
+        </div>
         <section class="about" id="about">
             <h2>our mission</h2>
             <p>We want to change the way people learn and view mistakes. Making a mistake has been drilled into our brain as something worth punishing. Konfide is here to change that.</p>
