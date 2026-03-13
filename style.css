@@ -15,7 +15,7 @@ body{
 header{
     width: 100%;
     display: flex;
-    backdrop-filter: blur(20px);
+    background-color: var(--darkmode_bg);
     align-items: center;
     justify-content: space-between;
     padding-left: 2rem;
@@ -24,7 +24,7 @@ header{
     padding-bottom: 1rem;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 header strong{
     font-size: 2rem;
@@ -47,28 +47,32 @@ ul{
     align-items: center;
     gap: 2rem;
 }
-header a{
+a{
     color: var(--darkmode_text);
     text-decoration: none;
 }
 a, li{
     text-transform: uppercase;
     font-weight: bold;
-    transition: all 0.05s ease-in-out;
+    transition: all 0.16s ease-in-out;
+    border-bottom: var(--darkmode_bg) solid 2px;
 }
-li:hover{
-    transform: scale(1.05);
+li:hover, .start-button-special:hover{
     border-bottom: var(--darkmode_text) solid 2px;
-    transform: translateY(1);
+    cursor: pointer;
+    transform: translateY(-2px);
 }
-.start-button{
+.start-button:hover, .start-button-special:hover{
+    box-shadow: 0 0 12px 4px #0065FF80;
+    transform: translateY(-2px);
+}
+.start-button, .start-button-special{
     background-color: var(--darkmode_clr_primary);
     border-radius: 0.75rem;
     padding: 0.5rem;
     text-align: center;
-    box-shadow: 0 0 12px 4px #0065FF80;
 }
-main{
+main, .hero{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,33 +83,51 @@ h1{
     font-size: 6rem;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: center;
-    margin-top: 15rem;
+    margin-top: 18rem;
     margin-bottom: 0;
-}
-.hero p{
+    line-height: 1;
     text-align: center;
+}
+.hero>p{
     font-weight: 500;
     margin-top: 0;
     font-size: 2.5rem;
 }
+.start-button-special{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    z-index: 2;
+    border-bottom: var(--darkmode_bg) solid 2px;
+}
 .about{
     background-color: var(--darkmode-clr-about);
     padding: 2rem;
+    padding-bottom: 10rem;
     text-align: center;
     z-index: 1;
+    transform: translateY(-6.5rem);
 }
 .about h2{
     font-size: 3.5rem;
+    margin-top: 5rem;
 }
-.wave{
+.divider, .divider-footer{
+    height: 50vh;
     width: 100%;
-    margin-top: 14rem;
-    margin-bottom: 2.5rem;
-    justify-content: center;
+    overflow: hidden;
 }
-#wave{
-    scale: 5.3;
+.divider{
+    transform: translateY(-6rem);
+}
+.divider-footer{
+    transform: translateY(-21rem);
+    z-index: 2;
+}
+.divider img, .divider-footer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(2) translateY(20%);
 }
 h2{
     text-transform: uppercase;
@@ -115,8 +137,10 @@ h2{
     margin: 2rem;
 }
 .about p{
-    margin-bottom: 3rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 5rem;
+    padding-top: 0;
     font-size: 1.25rem;
+}
+footer{
+    margin: 0;
 }
