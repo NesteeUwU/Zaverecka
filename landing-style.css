@@ -3,6 +3,7 @@
     --darkmode_text: #FFFFFF;
     --darkmode_clr_primary: #0065FF;
     --darkmode-clr-about: #2954A2;
+    --darkmode-clr-footer: #1E1E1E;
 }
 body{
     font-family: "Nunito", sans-serif;
@@ -102,10 +103,11 @@ h1{
 .about{
     background-color: var(--darkmode-clr-about);
     padding: 2rem;
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
+    padding-top: 10rem;
     text-align: center;
     z-index: 1;
-    transform: translateY(-6.5rem);
+    margin-top: -6rem;
 }
 .about h2{
     font-size: 3.5rem;
@@ -117,10 +119,10 @@ h1{
     overflow: hidden;
 }
 .divider{
-    transform: translateY(-6rem);
+    margin-top: -6rem;
 }
 .divider-footer{
-    transform: translateY(-21rem);
+    margin-top: -21rem;
     z-index: 2;
 }
 .divider img, .divider-footer img{
@@ -142,5 +144,5 @@ h2{
     font-size: 1.25rem;
 }
 footer{
-    margin: 0;
+    background-color: var(--darkmode-clr-footer);
 }
