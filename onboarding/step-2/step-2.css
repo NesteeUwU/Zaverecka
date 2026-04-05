@@ -4,8 +4,9 @@
     --darkmode_clr_primary: #0065FF;
     --darkmode-clr-about: #2954A2;
     --darkmode-clr-footer: #1E1E1E;
-    --darkmode-card-bg: #252526;
-    --darkmode-card-border: #363637;
+    --darkmode-card-bg: #1D1E20;
+    --darkmode-card-action: #2a2a2e;
+    --darkmode-card-border: #67686B;
 }
 body{
     height: 100vh;
@@ -37,6 +38,7 @@ header{
 }
 .part-2:hover{
     transform: rotate(90deg);
+    cursor: pointer;
 }
 .header-top img{
     width: 1.75rem;
@@ -89,7 +91,7 @@ main>b{
     transition: all 0.2s ease-in-out;
 }
 .card:hover{
-    background-color: var();
+    background-color: var(--darkmode-card-action);
     cursor: pointer;
     transform: translateY(-1rem);
 }
