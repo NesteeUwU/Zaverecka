@@ -20,7 +20,7 @@
     flex-direction: column;
     border-right: var(--darkmode-card-border) 3px solid;
     justify-content: space-between;
-    width: 35%;
+    width: 25%;
 }
 .top{
     display: flex;
@@ -38,19 +38,22 @@
     padding: 0.5rem;
     background-color: var(--darkmode-card-bg);
     border: var(--darkmode-card-border) 2px solid;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
 }
 .top img:hover{
     background-color: var(--darkmode-card-action);
     cursor: pointer;
 }
-.crossroad, .stats, .user{
+.crossroad, .stats, .user, .welcome, .quote, .lesson-recap{
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1.25rem;
     margin: 1rem;
     border: var(--darkmode-card-border) 3px solid;
-    border-radius: 2.5rem;
+    border-radius: 2.25rem;
+}
+.crossroad{
+    padding-right: 4rem;
 }
 .crossroad a{
     display: flex;
@@ -62,13 +65,31 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 0.75rem;
     font-family: "Poppins", sans-serif;
+    padding: 1rem;
+    padding-top: 0;
+    border-bottom: var(--darkmode_bg) solid 2px;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+.crossroad a:first-child{
+    padding-top: 1rem;
+}
+.crossroad a:hover{
+    border-bottom: var(--darkmode_text) solid 2px;
+}
+.crossroad img{
+    width: 1.25rem;
 }
 .stats{
     justify-content: center;
     align-items: center;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.stats img{
+    width: 2rem;
 }
 .streak, .time{
     display: flex;
@@ -79,7 +100,7 @@
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .stats hr{
     border: none;
@@ -88,24 +109,122 @@
     margin: 1rem;
     height: 3px;
 }
+.user{
+    gap: 1rem;
+}
 .user-info{
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 .user-info img:first-child{
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 1rem;
     border: var(--darkmode-card-border) 2px solid;
 }
 .user-info img:last-child{
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     filter: invert();
+}
+.username b{
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+}
+.username p{
+    font-size: 0.7rem;
+}
+.settings, .support{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
 }
 .settings img, .support img{
     width: 1.5rem;
+}
+.settings a, .support a, .top a{
+    color: var(--darkmode_text);
+    text-decoration: none;
 } 
+.welcome{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    height: 50vh;
+}
+.greeting{
+    padding: 3rem;
+}
+.greeting b{
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.greeting p{
+    font-size: 1.5rem;
+}
+.start-lesson{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: var(--darkmode-card-bg);
+    border: var(--darkmode-card-border) 2px solid;
+    border-radius: 2rem;
+    padding: 5rem;
+    height: 100%;
+}
 .start-lesson img{
-    width: 3rem;
+    width: 15rem;
+    height: 15rem;
+    box-shadow: inset var(--darkmode_clr_primary) 0 0 6rem -1rem;
+    border-radius: 2rem;
+    padding: 4rem;
+    transition: all 0.2s ease-in-out;
+}
+.start-lesson img:hover{
+    box-shadow: inset var(--darkmode_clr_primary) 0 0 6rem 1rem;
+}
+.lesson-summary b{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+}
+ul{
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+.motivation{
+    height: 44vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.quote, .lesson-recap{
+    padding: 2rem;
+    padding-top: 3rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.quote b, .lesson-recap b{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.lesson-recap p{
+    align-self: center;
+}
+small{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    padding-right: 2rem;
 }
