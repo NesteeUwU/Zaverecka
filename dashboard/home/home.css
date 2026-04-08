@@ -9,7 +9,9 @@
     --darkmode-card-border: #67686B;
 }
 .container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-row: 1fr;
     font-family: "Nunito", sans-serif;
     background-color: var(--darkmode_bg);
     color: var(--darkmode_text);
@@ -20,7 +22,6 @@
     flex-direction: column;
     border-right: var(--darkmode-card-border) 3px solid;
     justify-content: space-between;
-    width: 25%;
 }
 .top{
     display: flex;
@@ -53,14 +54,13 @@
     border-radius: 2.25rem;
 }
 .crossroad{
-    padding-right: 4rem;
+    padding-right: 1rem;
+    padding: 1rem;
 }
 .crossroad a{
     display: flex;
-    width: 100%;
     gap: 1rem;
     align-items: center;
-    margin: 1rem;
     color: var(--darkmode_text);
     text-decoration: none;
     text-transform: uppercase;
@@ -68,6 +68,7 @@
     font-size: 0.75rem;
     font-family: "Poppins", sans-serif;
     padding: 1rem;
+    margin: 1rem;
     padding-top: 0;
     border-bottom: var(--darkmode_bg) solid 2px;
     border-radius: 0.5rem;
@@ -80,7 +81,7 @@
     border-bottom: var(--darkmode_text) solid 2px;
 }
 .crossroad img{
-    width: 1.25rem;
+    width: 1.5rem;
 }
 .stats{
     justify-content: center;
