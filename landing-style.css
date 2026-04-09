@@ -9,23 +9,27 @@ body{
     font-family: "Nunito", sans-serif;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--darkmode_bg);
     color: var(--darkmode_text);
     position: relative;
 }
 header{
     width: 100%;
-    display: flex;
     background-color: var(--darkmode_bg);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+.responsivity{
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
-    position: fixed;
-    top: 0;
-    z-index: 3;
 }
 header strong{
     font-size: 2rem;
@@ -81,6 +85,7 @@ main, .hero{
 }
 .hero{
     height: 100vh;
+    height: 100dvh;
 }
 h1{
     font-family: "Poppins", sans-serif;
@@ -104,6 +109,7 @@ h1{
 }
 .about{
     background-color: var(--darkmode-clr-about);
+    width: 100%;
     padding: 2rem;
     padding-bottom: 15rem;
     padding-top: 10rem;
@@ -121,10 +127,10 @@ h1{
     overflow: hidden;
 }
 .divider{
-    margin-top: -30rem;
+    margin-top: -25rem;
 }
 .divider-footer{
-    margin-top: -21rem;
+    margin-top: -25rem;
     z-index: 2;
 }
 .divider img, .divider-footer img{
@@ -147,4 +153,11 @@ h2{
 }
 footer{
     background-color: var(--darkmode-clr-footer);
+}
+/*header je vpohode do 840px, potom potreba hamburger*/
+@media(width>1440px){
+    .responsivity, .about p{
+        width: 1200px;
+        justify-self: center;
+    }
 }
