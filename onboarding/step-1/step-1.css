@@ -9,7 +9,7 @@
     --darkmode-card-border: #67686B;
 }
 body{
-    height: 100vh;
+    height: 100vh; /*telefon bude muset scrollovat pokud bude vice karet tho*/
     display: flex;
     flex-direction: column;
     font-family: 'Nunito', sans-serif;
@@ -25,15 +25,16 @@ header{
     align-items: center;
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
-    padding: 1rem;
+    padding: min(1rem, 3%);
 }
 .part-1, .part-2{
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--darkmode_text);
+    font-size: clamp(0.75rem,2vw,1rem);
     text-decoration: none;
-    gap: 1.5rem;
+    gap: clamp(0.5rem,1vw,1.5rem);
     transition: all 0.3s;
 }
 .part-2:hover{
@@ -43,6 +44,9 @@ header{
 .header-top img{
     width: 1.75rem;
     filter: invert();
+}
+.header-top img:last-child{
+    width: clamp(1.5rem,4vw,1.75rem);
 }
 .header-bottom{
     display: flex;
@@ -68,27 +72,27 @@ main{
     justify-content: center;
 }
 main>b{
-    font-size: 3rem;
+    font-size: clamp(1.25rem, 4vw,3rem);
     font-weight: 700;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: min(5rem,10%);
 }
 .cards{
     display: flex;
     gap: 2rem;
-    margin: 5rem;
-    margin-bottom: 3rem;
+    margin: min(5rem,9%);
+    margin-bottom: min(3rem,7%);
 }
 .card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(1rem,1vw,2rem);
     border-radius: 2rem;
     background-color: var(--darkmode-card-bg);
     border: 5px solid var(--darkmode-card-border);
-    padding: 3rem;
-    padding-bottom: 5rem;
+    padding: clamp(1rem,3vw,3rem);
+    padding-bottom: clamp(2rem,3vw,5rem);
     transition: all 0.2s ease-in-out;
 }
 .card:hover{
@@ -97,7 +101,7 @@ main>b{
     transform: translateY(-1rem);
 }
 .card img{
-    width: auto;
+    width: clamp(9rem,5vw,8vw);
     border-radius: 1rem;
     border: 5px solid var(--darkmode-card-border);
 }
@@ -106,13 +110,15 @@ main>b{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: clamp(0.75rem,1vw,1rem);
 }
 .card-text b{
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: clamp(1rem,2vw,2rem);
 }
 .continue-button{
-    padding: 1rem;
+    padding: clamp(0.75rem,1vw,1rem);
+    font-size: clamp(0.75rem,1vw,1rem);
     text-transform: uppercase;
     border: 2px solid var(--darkmode_text);
     border-radius: 1rem;
@@ -124,4 +130,5 @@ footer{
     align-self: flex-end;
     margin-top: auto;
     padding-right: 1rem;
+    font-size: clamp(0.5rem,1vw,1rem);
 }
