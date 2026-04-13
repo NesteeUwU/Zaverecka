@@ -154,10 +154,3 @@ h2{
 footer{
     background-color: var(--darkmode-clr-footer);
 }
-/*header je vpohode do 840px, potom potreba hamburger*/
-@media(width>1440px){
-    .responsivity, .about p{
-        width: 1200px;
-        justify-self: center;
-    }
-}
