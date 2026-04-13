@@ -25,15 +25,16 @@ header{
     align-items: center;
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
-    padding: 1rem;
+    padding: min(1rem, 3%);
 }
 .part-1, .part-2{
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--darkmode_text);
+    font-size: clamp(0.75rem,2vw,1rem);
     text-decoration: none;
-    gap: 1.5rem;
+    gap: clamp(0.5rem,1vw,1.5rem);
     transition: all 0.3s;
 }
 .part-2:hover{
@@ -43,6 +44,9 @@ header{
 .header-top img{
     width: 1.75rem;
     filter: invert();
+}
+.header-top img:last-child{
+    width: clamp(1.5rem,4vw,1.75rem);
 }
 .header-bottom{
     display: flex;
@@ -61,33 +65,34 @@ main{
     justify-content: center;
 }
 main>b{
-    font-size: 3rem;
+    font-size: clamp(1.25rem, 4vw,3rem);
     font-weight: 700;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: min(5rem,10%);
 }
 .cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-auto-rows: 1fr;
-    grid-auto-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
-    margin: 5rem;
-    margin-bottom: 3rem;
+    margin: min(5rem,9%);
+    margin-bottom: min(3rem,7%);
 }
 .card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    width: clamp(14rem, 22vw,24rem);
+    gap: clamp(1rem,1vw,2rem);
     border-radius: 2rem;
-    padding: 4rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: clamp(2rem,3vw,3rem);
+    padding-top: clamp(3rem,4vw,5rem);
+    padding-bottom: clamp(3rem,4vw,5rem);
     background-color: var(--darkmode-card-bg);
     border: 5px solid var(--darkmode-card-border);
     transition: all 0.2s ease-in-out;
+    text-align: center;
 }
 .card:hover{
     background-color: var(--darkmode-card-action);
@@ -95,21 +100,23 @@ main>b{
     transform: translateY(-1rem);
 }
 .card img{
-    width: 12rem;
+    width: clamp(8rem,9vw,12rem);
 }
 .card-text{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: clamp(0.75rem,1vw,1rem);
 }
 .card-text b{
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(1rem,2.5vw,2.5rem);
 }
 .continue-button{
-    padding: 1rem;
+    padding: clamp(0.75rem,1vw,1rem);
+    font-size: clamp(0.75rem,1vw,1rem);
     text-transform: uppercase;
     border: 2px solid var(--darkmode_text);
     border-radius: 1rem;
@@ -121,4 +128,5 @@ footer{
     align-self: flex-end;
     margin-top: auto;
     padding-right: 1rem;
+    font-size: clamp(0.5rem,1vw,1rem);
 }
