@@ -98,7 +98,6 @@ main>b{
 .card:hover{
     background-color: var(--darkmode-card-action);
     cursor: pointer;
-    transform: translateY(-1rem);
 }
 .card img{
     width: clamp(9rem,5vw,8vw);
@@ -116,15 +115,28 @@ main>b{
     text-transform: uppercase;
     font-size: clamp(1rem,2vw,2rem);
 }
+.card:hover, .card.selected{
+    transform: translateY(-1rem);
+}
+.card.selected, .card.selected img{
+    border-color: var(--darkmode_clr_primary);
+    background-color: #051c3e;
+}
 .continue-button{
     padding: clamp(0.75rem,1vw,1rem);
     font-size: clamp(0.75rem,1vw,1rem);
     text-transform: uppercase;
+    pointer-events: none;
     border: 2px solid var(--darkmode_text);
     border-radius: 1rem;
     color: var(--darkmode_text);
     text-decoration: none;
     font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+.continue-button.enabled{
+    background-color: var(--darkmode_clr_primary);
+    pointer-events: all;
 }
 footer{
     align-self: flex-end;
