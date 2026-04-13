@@ -101,7 +101,12 @@ main>b{
 .card:hover{
     background-color: var(--darkmode-card-action);
     cursor: pointer;
+}
+.card:hover, .card.selected{
     transform: translateY(-1rem);
+}
+.card.selected{
+    border-color: var(--darkmode_clr_primary);
 }
 .card img{
     width: clamp(7rem,3vw,12rem);
@@ -130,7 +135,13 @@ main>b{
     border-radius: 1rem;
     color: var(--darkmode_text);
     text-decoration: none;
+    pointer-events: none;
     font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
+.continue-button.enabled{
+    background-color: var(--darkmode_clr_primary);
+    pointer-events: all;
 }
 footer{
     align-self: flex-end;

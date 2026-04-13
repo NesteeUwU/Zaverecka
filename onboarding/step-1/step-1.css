@@ -120,7 +120,6 @@ main>b{
 }
 .card.selected, .card.selected img{
     border-color: var(--darkmode_clr_primary);
-    background-color: #051c3e;
 }
 .continue-button{
     padding: clamp(0.75rem,1vw,1rem);
@@ -132,7 +131,7 @@ main>b{
     color: var(--darkmode_text);
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .continue-button.enabled{
     background-color: var(--darkmode_clr_primary);
