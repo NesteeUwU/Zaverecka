@@ -132,10 +132,10 @@ h1{
     overflow: hidden;
 }
 .divider{
-    margin-top: clamp(-15rem, -25vh, -25rem);
+    margin-top: clamp(-25rem, -40vh, -15rem);
 }
 .divider-footer{
-    margin-top: clamp(-15rem, -25vh, -25rem);
+    margin-top: clamp(-25rem, -40vh, -15rem);
     z-index: 2;
 }
 .divider img, .divider-footer img{
