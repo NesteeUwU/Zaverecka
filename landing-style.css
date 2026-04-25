@@ -14,6 +14,7 @@ body{
     background-color: var(--darkmode_bg);
     color: var(--darkmode_text);
     position: relative;
+    font-size: clamp(0.75rem,2vw,1rem);
 }
 header{
     width: 100%;
@@ -26,18 +27,17 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-left: clamp(1rem,2vw,2rem);
+    padding-right: clamp(1rem,2vw,2rem);
+    padding-top: clamp(0.5rem,1vw,1.5rem);
+    padding-bottom: clamp(0.75rem,2vw,1rem);
 }
 header strong{
-    font-size: 2rem;
+    font-size: clamp(1rem,2vw,2rem);
 }
 #theme-toggle{
     filter: invert();
-    width: 2rem;
-    margin-left: 15rem;
+    width: clamp(1rem,2.5vw,2rem);
     transition: all 0.3s;
 }
 #theme-toggle:hover{
@@ -50,7 +50,7 @@ ul{
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(1rem,2vw,2rem);
 }
 a{
     color: var(--darkmode_text);
@@ -61,8 +61,9 @@ a, li{
     font-weight: bold;
     transition: all 0.16s ease-in-out;
     border-bottom: var(--darkmode_bg) solid 2px;
+    font-size: clamp(0.75rem,2vw,1rem);
 }
-li:hover, .start-button-special:hover{
+li:hover, .start-button:hover, .start-button-special:hover{
     border-bottom: var(--darkmode_text) solid 2px;
     cursor: pointer;
     transform: translateY(-2px);
@@ -70,6 +71,9 @@ li:hover, .start-button-special:hover{
 .start-button:hover, .start-button-special:hover{
     box-shadow: 0 0 12px 4px #0065FF80;
     transform: translateY(-2px);
+}
+li:last-child{
+    border-bottom: none;
 }
 .start-button, .start-button-special{
     background-color: var(--darkmode_clr_primary);
@@ -89,7 +93,7 @@ main, .hero{
 }
 h1{
     font-family: "Poppins", sans-serif;
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 7vw, 6rem);
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -99,27 +103,28 @@ h1{
 .hero>p{
     font-weight: 300;
     margin-top: 0;
-    font-size: 2rem;
+    font-size: clamp(1rem,2.5vw,2rem);
 }
 .start-button-special{
-    font-size: 1.5rem;
-    margin-top: 1rem;
+    font-size: clamp(1rem,1.5vw,1.5rem);
+    margin-top: clamp(0.75rem,2vw,1rem);
     z-index: 2;
     border-bottom: var(--darkmode_bg) solid 2px;
 }
 .about{
     background-color: var(--darkmode-clr-about);
     width: 100%;
-    padding: 2rem;
-    padding-bottom: 15rem;
-    padding-top: 10rem;
+    padding: clamp(1rem,2.5vw,2rem);
+    padding-bottom: clamp(10rem, 30vh, 18rem);
+    padding-top: clamp(8rem, 15vh, 12rem);
     text-align: center;
     z-index: 1;
-    margin-top: -6rem;
+    font-size: clamp(0.75rem,2vw,1rem);
+    margin-top: clamp(-4rem, - 6vh, -6rem);
 }
 .about h2{
-    font-size: 3.5rem;
-    margin-top: 5rem;
+    font-size: clamp(1.75rem, 4vw, 3.5rem);
+    margin-top: clamp(3rem, 4vw, 5rem);
 }
 .divider, .divider-footer{
     height: 50vh;
@@ -127,10 +132,10 @@ h1{
     overflow: hidden;
 }
 .divider{
-    margin-top: -25rem;
+    margin-top: clamp(-15rem, -25vh, -25rem);
 }
 .divider-footer{
-    margin-top: -25rem;
+    margin-top: clamp(-15rem, -25vh, -25rem);
     z-index: 2;
 }
 .divider img, .divider-footer img{
@@ -143,13 +148,13 @@ h2{
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 2.5rem;
-    margin: 2rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    margin: clamp(1rem,2.5vw,2rem);
 }
 .about p{
-    padding: 5rem;
+    padding: clamp(3rem, 4vw, 5rem);
     padding-top: 0;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 footer{
     background-color: var(--darkmode-clr-footer);
