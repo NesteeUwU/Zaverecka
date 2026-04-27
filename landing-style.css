@@ -4,6 +4,7 @@
     --darkmode_clr_primary: #0065FF;
     --darkmode-clr-about: #2954A2;
     --darkmode-clr-footer: #1E1E1E;
+    --darkmode-clr-special: #cccccc;
 }
 body{
     font-family: "Nunito", sans-serif;
@@ -70,6 +71,7 @@ li:hover, .start-button:hover, .start-button-special:hover{
 }
 .start-button:hover, .start-button-special:hover{
     box-shadow: 0 0 12px 4px #0065FF80;
+    border-bottom: var(--darkmode-clr-special) solid 2px;
     transform: translateY(-2px);
 }
 li:last-child{
