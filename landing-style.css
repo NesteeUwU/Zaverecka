@@ -33,6 +33,10 @@ header{
     padding-top: clamp(0.5rem,1vw,1.5rem);
     padding-bottom: clamp(0.75rem,2vw,1rem);
 }
+#brand{
+    text-transform: capitalize;
+    font-weight: initial;
+}
 header strong{
     font-size: clamp(1rem,2vw,2rem);
 }
