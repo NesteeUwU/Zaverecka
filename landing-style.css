@@ -160,4 +160,7 @@ h2{
 }
 footer{
     background-color: var(--darkmode-clr-footer);
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
