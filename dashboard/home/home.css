@@ -2,8 +2,6 @@
     --darkmode_bg: #111213;
     --darkmode_text: #FFFFFF;
     --darkmode_clr_primary: #0065FF;
-    --darkmode-clr-about: #2954A2;
-    --darkmode-clr-footer: #1E1E1E;
     --darkmode-card-bg: #1D1E20;
     --darkmode-card-action: #2a2a2e;
     --darkmode-card-border: #67686B;
@@ -72,7 +70,7 @@
     padding-top: 0;
     border-bottom: var(--darkmode_bg) solid 2px;
     border-radius: 0.5rem;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 .crossroad a:first-child{
     padding-top: 1rem;
