@@ -64,7 +64,7 @@ a{
 a, li{
     text-transform: uppercase;
     font-weight: bold;
-    transition: all 0.16s ease-in-out;
+    transition: transform 0.16s ease-in-out, border-bottom 0.16s ease-in-out;
     border-bottom: var(--darkmode_bg) solid 2px;
     font-size: clamp(0.75rem,2vw,1rem);
 }
@@ -127,6 +127,10 @@ h1{
     z-index: 1;
     font-size: clamp(0.75rem,2vw,1rem);
     margin-top: clamp(-4rem, - 6vh, -6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .about h2{
     font-size: clamp(1.75rem, 4vw, 3.5rem);
@@ -173,6 +177,7 @@ h2{
     padding: clamp(3rem, 4vw, 5rem);
     padding-top: 0;
     font-size: clamp(1rem, 1.5vw, 1.25rem);
+    max-width: 80rem;
 }
 footer{
     background-color: var(--darkmode-clr-footer);
@@ -202,5 +207,8 @@ body.light-mode footer {
     color: var(--darkmode_bg);
 }
 body.light-mode .start-button:hover, body.light-mode .start-button-special:hover{
-    border-bottom: var(--darkmode_clr_primary) solid 2px;
+    border-bottom: #113086 solid 2px;
+}
+body.light-mode .about{
+    color: #0F172A;
 }
