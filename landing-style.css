@@ -140,6 +140,18 @@ h1{
 .divider{
     margin-top: clamp(-25rem, -40vh, -15rem);
 }
+#lightmode-divider {
+    display: none;
+}
+body.light-mode #lightmode-divider {
+    display: block;
+}
+body.light-mode #darkmode-divider {
+    display: none;
+}
+.hidden{
+    display: none;
+}
 .divider-footer{
     margin-top: clamp(-25rem, -40vh, -15rem);
     z-index: 2;
@@ -167,4 +179,28 @@ footer{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+body.light-mode {
+    --darkmode_bg: #F8FAFC;
+    --darkmode_text: #111213;
+    --darkmode-clr-about: #93C5FD;
+}
+
+body.light-mode #theme-toggle {
+    filter: none;
+}
+
+body.light-mode a {
+    color: var(--darkmode_text);
+}
+
+body.light-mode .start-button, body.light-mode .start-button-special {
+    background-color: var(--darkmode_clr_primary);
+    color: var(--darkmode_bg);
+}
+body.light-mode footer {
+    color: var(--darkmode_bg);
+}
+body.light-mode .start-button:hover, body.light-mode .start-button-special:hover{
+    border-bottom: var(--darkmode_clr_primary) solid 2px;
 }
