@@ -194,6 +194,7 @@ body.light-mode {
     --darkmode_bg: #F8FAFC;
     --darkmode_text: #111213;
     --darkmode-clr-about: #93C5FD;
+    --darkmode-clr-footer: #395EA2;
 }
 
 body.light-mode #theme-toggle {
@@ -216,4 +217,15 @@ body.light-mode .start-button:hover, body.light-mode .start-button-special:hover
 }
 body.light-mode .about{
     color: #0F172A;
+}
+#footer-lightmode {
+    display: none;
+}
+
+body.light-mode #footer-lightmode {
+    display: flex;
+}
+
+body.light-mode #footer-darkmode {
+    display: none;
 }
