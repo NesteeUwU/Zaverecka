@@ -6,6 +6,9 @@
     --darkmode-clr-footer: #1E1E1E;
     --darkmode-clr-special: #cccccc;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: "Nunito", sans-serif;
     display: flex;
@@ -65,7 +68,7 @@ a, li{
     text-transform: uppercase;
     font-weight: bold;
     transition: transform 0.16s ease-in-out, border-bottom 0.16s ease-in-out;
-    border-bottom: var(--darkmode_bg) solid 2px;
+    border-bottom: transparent solid 2px;
     font-size: clamp(0.75rem,2vw,1rem);
 }
 li:hover, .start-button:hover, .start-button-special:hover{
@@ -84,8 +87,10 @@ li:last-child{
 .start-button, .start-button-special{
     background-color: var(--darkmode_clr_primary);
     border-radius: 0.75rem;
+    box-shadow: 0 0 12px 4px #0066ff00;
     padding: 0.5rem;
     text-align: center;
+    transition: transform 0.16s ease-in-out, box-shadow 0.16s ease-in-out;
 }
 main, .hero{
     display: flex;
@@ -115,7 +120,7 @@ h1{
     font-size: clamp(1rem,1.5vw,1.5rem);
     margin-top: clamp(0.75rem,2vw,1rem);
     z-index: 2;
-    border-bottom: var(--darkmode_bg) solid 2px;
+    border-bottom: transparent solid 2px;
 }
 .about{
     background-color: var(--darkmode-clr-about);
