@@ -33,15 +33,27 @@ header{
     justify-content: space-between;
     padding-left: clamp(1rem,2vw,2rem);
     padding-right: clamp(1rem,2vw,2rem);
-    padding-top: clamp(0.5rem,1vw,1.5rem);
-    padding-bottom: clamp(0.75rem,2vw,1rem);
+    padding-top: clamp(0.75rem,2vw,1.5rem);
+    padding-bottom: clamp(0.75rem,2vw,1.5rem);
+}
+.phone-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 #brand{
     text-transform: capitalize;
     font-weight: initial;
 }
 header strong{
-    font-size: clamp(1rem,2vw,2rem);
+    font-size: clamp(1.125rem,2vw,2rem);
 }
 #theme-toggle{
     filter: invert();
@@ -53,8 +65,9 @@ header strong{
 }
 nav{
     display: flex;
+    align-items: center;
 }
-ul{
+ul.wide{
     display: flex;
     list-style: none;
     align-items: center;
@@ -69,7 +82,7 @@ a, li{
     font-weight: bold;
     transition: transform 0.16s ease-in-out, border-bottom 0.16s ease-in-out;
     border-bottom: transparent solid 2px;
-    font-size: clamp(0.75rem,2vw,1rem);
+    font-size: clamp(0.75rem,1.25vw,1rem);
 }
 li:hover, .start-button:hover, .start-button-special:hover{
     border-bottom: var(--darkmode_text) solid 2px;
@@ -98,20 +111,33 @@ li:last-child{
     gap: 0.25rem;
 }
 .line-1, .line-2, .line-3{
-    width: 1.75rem;
-    height: 0.25rem;
+    width: 1.25rem;
+    height: 0.125rem;
     background-color: var(--darkmode_text);
     border-radius: 0.25rem;
     transition: all 0.3s ease-in-out;
 }
-.hamburger:hover .line-1{
-    transform: rotate(45deg) translate(0,11px);
+.hamburger.change .line-1{
+    transform: rotate(45deg) translate(0,8.5px);
 }
-.hamburger:hover .line-2{
+.hamburger.change .line-2{
     opacity: 0;
 }
-.hamburger:hover .line-3{
-    transform: rotate(-45deg) translate(0,-11px);
+.hamburger.change .line-3{
+    transform: rotate(-45deg) translate(0,-8.5px);
+}
+.hamburger-menu{
+    display: none;
+}
+.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+    color: var(--darkmode_text);
 }
 main, .hero{
     display: flex;
@@ -259,7 +285,10 @@ body.light-mode #footer-darkmode {
     }
 }
 @media(width<=768px){
-    ul{
+    ul.wide{
         display: none;
+    }
+    .phone-header{
+        width: 100%;
     }
 }
