@@ -147,3 +147,38 @@ footer{
     padding-right: 1rem;
     font-size: clamp(0.5rem,1vw,1rem);
 }
+body.light-mode {
+    --darkmode_bg: #F8FAFC;
+    --darkmode_text: #111213;
+    --darkmode-card-bg: #E8EDF2;
+    --darkmode-card-action: #D8E2EC;
+    --darkmode-card-border: #93C5FD;
+}
+
+body.light-mode #theme-toggle, body.light-mode .header-top img{
+    filter: none;
+}
+
+body.light-mode a {
+    color: var(--darkmode_text);
+}
+body.light-mode .completed {
+    background-color: #0065FF;
+    color: #0065FF;
+}
+
+body.light-mode .uncomplete {
+    background-color: #BFDBFE;
+    color: #BFDBFE;
+}
+body.light-mode footer {
+    color: var(--darkmode_bg);
+}
+body.light-mode .continue-button{
+    background-color: var(--darkmode-card-bg);
+    border-color: var(--darkmode-card-border);
+}
+body.light-mode .continue-button.enabled {
+    background-color: var(--darkmode-card-border);
+    border-color: var(--darkmode_clr_primary);
+}

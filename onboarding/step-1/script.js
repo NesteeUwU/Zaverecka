@@ -2,7 +2,6 @@ const cards = document.querySelectorAll('.card');
 const continueBtn = document.querySelector('.continue-button');
 let colorScheme = document.querySelector('#theme-toggle');
 let body = document.querySelector('body');
-
 cards.forEach(card => {
     card.addEventListener('click', function() {
         cards.forEach(c => c.classList.remove('selected'));
