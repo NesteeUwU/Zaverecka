@@ -26,9 +26,9 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: clamp(0.75rem,2vw,1rem);
     text-transform: capitalize;
-    font-size: 1.5rem;
+    font-size: clamp(0.75rem,2vw,1.5rem);
     font-family: "Poppins", sans-serif;
 }
 #logo{
@@ -36,8 +36,8 @@
     font-size: clamp(1rem,2vw,2rem);
 }
 .top img{
-    width: 1.75rem;
-    height: 1.75rem;
+    width: clamp(1.125rem, 3vh, 1.75rem);
+    height: clamp(1.125rem, 3vh, 1.75rem);
     padding: 0.5rem;
     background-color: var(--darkmode-card-bg);
     border: var(--darkmode-card-border) 2px solid;
@@ -50,18 +50,18 @@
 .crossroad, .stats, .user, .welcome, .quote, .lesson-recap{
     display: flex;
     flex-direction: column;
-    padding: 1.25rem;
-    margin: 1rem;
+    padding: clamp(1rem, 1.5vw, 1.25rem);
+    margin: clamp(0.75rem,2vw,1rem);
     border: var(--darkmode-card-border) 3px solid;
     border-radius: 2.25rem;
 }
 .crossroad{
-    padding-right: 1rem;
-    padding: 1rem;
+    padding-right: clamp(0.75rem,2vw,1rem);
+    padding: clamp(0.75rem,2vw,1rem);
 }
 .crossroad a{
     display: flex;
-    gap: 1rem;
+    gap: clamp(0.75rem,2vw,1rem);
     align-items: center;
     color: var(--darkmode_text);
     text-decoration: none;
@@ -69,66 +69,66 @@
     font-weight: 700;
     font-size: 0.75rem;
     font-family: "Poppins", sans-serif;
-    padding: 1rem;
-    margin: 1rem;
+    padding: clamp(0.75rem,2vw,1rem);
+    margin: clamp(0.75rem,2vw,1rem);
     padding-top: 0;
     border-bottom: var(--darkmode_bg) solid 2px;
     border-radius: 0.5rem;
     transition: all 0.15s ease-in-out;
 }
 .crossroad a:first-child{
-    padding-top: 1rem;
+    padding-top: clamp(0.75rem,2vw,1rem);
 }
 .crossroad a:hover{
     border-bottom: var(--darkmode_text) solid 2px;
 }
 .crossroad img{
-    width: 1.5rem;
+    width: clamp(0.75rem,2vw,1.5rem);
 }
 .stats{
     justify-content: center;
     align-items: center;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: clamp(0.75rem,2vw,1.5rem);
+    padding-bottom: clamp(0.75rem,2vw,1.5rem);
 }
 .stats img{
-    width: 2rem;
+    width: clamp(1rem,2vw,2rem);
 }
 .streak, .time{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 1rem;
+    gap: clamp(0.75rem,2vw,1rem);
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: clamp(0.75rem,2vw,1rem);
 }
 .stats hr{
     border: none;
     background-color: var(--darkmode-card-border);
     width: 80%;
-    margin: 1rem;
+    margin: clamp(0.75rem,2vw,1rem);
     height: 3px;
 }
 .user{
-    gap: 1rem;
+    gap: clamp(0.75rem,2vw,1rem);
 }
 .user-info{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: clamp(0.75rem,2vw,1rem);
 }
 .user-info img:first-child{
-    width: 3rem;
-    height: 3rem;
-    border-radius: 1rem;
+    width: clamp(2.25rem, 3vw, 3rem);
+    height: clamp(2.25rem, 3vw, 3rem);
+    border-radius: clamp(0.75rem,2vw,1rem);
     border: var(--darkmode-card-border) 2px solid;
 }
 .user-info img:last-child{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: clamp(0.75rem,2vw,1.5rem);
+    height: clamp(0.75rem,2vw,1.5rem);
     filter: invert();
 }
 .username b{
@@ -147,7 +147,7 @@
     font-size: 0.7rem;
 }
 .settings img, .support img{
-    width: 1.5rem;
+    width: clamp(0.75rem,2vw,1.5rem);
 }
 .settings a, .support a, .top a{
     color: var(--darkmode_text);
@@ -157,38 +157,38 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem;
+    padding: clamp(2.25rem, 3vw, 3rem);
     height: 50vh;
 }
 .greeting{
-    padding: 3rem;
+    padding: clamp(2.25rem, 3vw, 3rem);
 }
 .greeting b{
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 .greeting p{
-    font-size: 1.5rem;
+    font-size: clamp(0.75rem,2vw,1.5rem);
 }
 .start-lesson{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
+    gap: clamp(3rem, 6vw, 5rem);
     background-color: var(--darkmode-card-bg);
     border: var(--darkmode-card-border) 2px solid;
     border-radius: 2rem;
-    padding: 5rem;
+    padding: clamp(3rem, 6vw, 5rem);
     height: 100%;
 }
 .start-lesson img{
-    width: 15rem;
-    height: 15rem;
+    width: clamp(8rem, 10vw, 15rem);
+    height: clamp(8rem, 10vw, 15rem);
     box-shadow: inset var(--darkmode_clr_primary) 0 0 6rem -1rem;
     border-radius: 2rem;
-    padding: 4rem;
+    padding: clamp(2rem, 4vw, 4rem);
     transition: all 0.2s ease-in-out;
 }
 .start-lesson img:hover{
@@ -197,11 +197,11 @@
 .lesson-summary b{
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: 1.75rem;
+    font-size: clamp(1.125rem, 3vh, 1.75rem);
     text-transform: uppercase;
 }
 ul{
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
     padding: 1rem;
 }
 .motivation{
@@ -210,16 +210,16 @@ ul{
     grid-template-columns: 1fr 2fr;
 }
 .quote, .lesson-recap{
-    padding: 2rem;
-    padding-top: 3rem;
-    gap: 1rem;
+    padding: clamp(1rem,2vw,2rem);
+    padding-top: clamp(2.25rem, 3vw, 3rem);
+    gap: clamp(0.75rem,2vw,1rem);
     display: flex;
     flex-direction: column;
 }
 .quote b, .lesson-recap b{
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: clamp(0.75rem,2vw,1.5rem);
     text-transform: capitalize;
 }
 .lesson-recap p{
@@ -229,5 +229,5 @@ small{
     display: flex;
     width: 100%;
     justify-content: right;
-    padding-right: 2rem;
+    padding-right: clamp(1rem,2vw,2rem);
 }
