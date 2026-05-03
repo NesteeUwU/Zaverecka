@@ -55,12 +55,15 @@ header{
 header strong{
     font-size: clamp(1.125rem,2vw,2rem);
 }
-#theme-toggle{
+#theme-toggle, #theme-toggle-hamburger{
     filter: invert();
-    width: clamp(1rem,2.5vw,2rem);
+    width: clamp(1.5rem,2.5vw,2rem);
     transition: all 0.3s;
 }
-#theme-toggle:hover{
+#theme-toggle-hamburger{
+    width: 2rem;
+}
+#theme-toggle:hover, #theme-toggle-hamburger:hover{
     transform: rotate(90deg);
 }
 nav{
@@ -82,6 +85,8 @@ a, li{
     font-weight: bold;
     transition: transform 0.16s ease-in-out, border-bottom 0.16s ease-in-out;
     border-bottom: transparent solid 2px;
+}
+.wide a, .wide li{
     font-size: clamp(0.75rem,1.25vw,1rem);
 }
 li:hover, .start-button:hover, .start-button-special:hover{
@@ -128,6 +133,18 @@ li:last-child{
 }
 .hamburger-menu{
     display: none;
+}
+.hamburger-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hamburger-menu li{
+    font-size: 1.5rem;
 }
 .active{
     display: flex;
@@ -244,7 +261,7 @@ body.light-mode {
     --darkmode-clr-footer: #395EA2;
 }
 
-body.light-mode #theme-toggle {
+body.light-mode #theme-toggle, body.light-mode #theme-toggle-hamburger {
     filter: none;
 }
 

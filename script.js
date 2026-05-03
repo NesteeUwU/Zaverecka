@@ -1,4 +1,5 @@
 let colorScheme = document.querySelector('#theme-toggle');
+let colorSchemeMobile = document.querySelector('#theme-toggle-hamburger');
 let divider = document.querySelector('#lightmode-divider');
 let body = document.querySelector('body');
 let hamburger = document.querySelector('.hamburger');
@@ -7,6 +8,15 @@ let responsivity = document.querySelector('.responsivity');
 let nav = document.querySelector('nav');
 
 colorScheme.addEventListener('click', function() {
+    body.classList.toggle('light-mode');
+    
+    if (body.classList.contains('light-mode')) {
+        divider.classList.add('hidden');
+    } else {
+        divider.classList.remove('hidden');
+    }
+});
+colorSchemeMobile.addEventListener('click', function() {
     body.classList.toggle('light-mode');
     
     if (body.classList.contains('light-mode')) {
