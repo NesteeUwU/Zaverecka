@@ -11,6 +11,7 @@
     grid-template-columns: 1fr 5fr;
     grid-row: 1fr;
     font-family: "Nunito", sans-serif;
+    font-size: clamp(0.75rem,2vw,1rem);
     background-color: var(--darkmode_bg);
     color: var(--darkmode_text);
     height: 100vh;
@@ -30,6 +31,30 @@
     text-transform: capitalize;
     font-size: clamp(0.75rem,2vw,1.5rem);
     font-family: "Poppins", sans-serif;
+}
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.line-1, .line-2, .line-3{
+    width: 1.25rem;
+    height: 0.125rem;
+    background-color: var(--darkmode_text);
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+.hamburger.change .line-1{
+    transform: rotate(45deg) translate(0,8.5px);
+}
+.hamburger.change .line-2{
+    opacity: 0;
+}
+.hamburger.change .line-3{
+    transform: rotate(-45deg) translate(0,-8.5px);
+}
+.hamburger-menu{
+    display: none;
 }
 #logo{
     font-family: "Nunito", sans-serif;
@@ -154,9 +179,11 @@
     text-decoration: none;
 } 
 .welcome{
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: clamp(2.25rem, 3vw, 3rem);
     height: 50vh;
 }
@@ -197,7 +224,7 @@
 .lesson-summary b{
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: clamp(1.125rem, 3vh, 1.75rem);
+    font-size: clamp(1rem, 3vh, 1.75rem);
     text-transform: uppercase;
 }
 ul{
@@ -230,4 +257,91 @@ small{
     width: 100%;
     justify-content: right;
     padding-right: clamp(1rem,2vw,2rem);
+}
+@media(width>=1440px){
+    .hamburger{
+        display: none;
+    }
+}
+@media(width<1440px) and (width>790px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    .sidebar{
+        flex-direction: row;
+        border: none;
+        border-bottom: var(--darkmode-card-border) 3px solid;
+        border-radius: 0.5rem;
+    }
+    .top img{
+        display: none;
+    }
+    .crossroad, .stats, .user{
+        display: none;
+    }
+    .welcome{
+        height: auto;
+    }
+    .greeting{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .start-lesson{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .motivation{
+        height: auto;
+        width: 98%;
+    }
+    .lesson-recap{
+        width: 100%;
+    }
+}
+@media(width<=790px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    .sidebar{
+        flex-direction: row;
+        border: none;
+        border-bottom: var(--darkmode-card-border) 3px solid;
+        border-radius: 0.5rem;
+    }
+    .top img{
+        display: none;
+    }
+    .crossroad, .stats, .user{
+        display: none;
+    }
+    .welcome{
+        height: auto;
+        justify-content: center;
+    }
+    .greeting{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .start-lesson{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .motivation{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .lesson-recap{
+        width: 100%;
+    }
 }
