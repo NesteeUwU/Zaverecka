@@ -72,6 +72,9 @@
     background-color: var(--darkmode-card-action);
     cursor: pointer;
 }
+.hamburger-menu{
+    display: none;
+}
 .crossroad, .stats, .user, .welcome, .quote, .lesson-recap{
     display: flex;
     flex-direction: column;
