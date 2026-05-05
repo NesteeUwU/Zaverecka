@@ -1,14 +1,14 @@
 let hamburger = document.querySelector('.hamburger');
+let hamburgerMenu = document.querySelector('.hamburger-menu');
+let sidebar = document.querySelector('.sidebar');
 hamburger.addEventListener("click", function() {
     hamburger.classList.toggle('change');
     if (hamburger.classList.contains('change')) {
         hamburgerMenu.classList.add('active');
-        responsivity.classList.add('vertical');
-        nav.classList.add('vertical');
+        sidebar.classList.add('.vertical');
     }
     else{
         hamburgerMenu.classList.remove('active');
-        responsivity.classList.remove('vertical');
-        nav.classList.remove('vertical');
+        sidebar.classList.remove('.vertical');
     }
 });

@@ -32,6 +32,13 @@
     font-size: clamp(0.75rem,2vw,1.5rem);
     font-family: "Poppins", sans-serif;
 }
+.vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 .hamburger{
     display: flex;
     flex-direction: column;
@@ -75,7 +82,29 @@
 .hamburger-menu{
     display: none;
 }
-.crossroad, .stats, .user, .welcome, .quote, .lesson-recap{
+.hamburger-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hamburger-menu li{
+    font-size: 1.5rem;
+}
+.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+    color: var(--darkmode_text);
+}
+.crossroad, .stats, .user, .welcome, .quote, .lesson-recap, .hamburger-menu.active .crossroad-mobile, .hamburger-menu.active .stats-mobile, .hamburger-menu.active .user-mobile {
     display: flex;
     flex-direction: column;
     padding: clamp(1rem, 1.5vw, 1.25rem);
@@ -87,7 +116,7 @@
     padding-right: clamp(0.75rem,2vw,1rem);
     padding: clamp(0.75rem,2vw,1rem);
 }
-.crossroad a{
+.crossroad a, .hamburger-menu.active .crossroad-mobile a{
     display: flex;
     gap: clamp(0.75rem,2vw,1rem);
     align-items: center;
@@ -113,14 +142,14 @@
 .crossroad img{
     width: clamp(0.75rem,2vw,1.5rem);
 }
-.stats{
+.stats, .hamburger-menu.active .stats-mobile{
     justify-content: center;
     align-items: center;
     padding-top: clamp(0.75rem,2vw,1.5rem);
     padding-bottom: clamp(0.75rem,2vw,1.5rem);
 }
-.stats img{
-    width: clamp(1rem,2vw,2rem);
+.stats img, .hamburger-menu.active .stats-mobile img{
+    width: clamp(1.5rem,2vw,2rem);
 }
 .streak, .time{
     display: flex;
@@ -133,14 +162,14 @@
     font-weight: 700;
     font-size: clamp(0.75rem,2vw,1rem);
 }
-.stats hr{
+.stats hr, .hamburger-menu.active .stats-mobile hr{
     border: none;
     background-color: var(--darkmode-card-border);
     width: 80%;
     margin: clamp(0.75rem,2vw,1rem);
     height: 3px;
 }
-.user{
+.user, .hamburger-menu.active .user-mobile {
     gap: clamp(0.75rem,2vw,1rem);
 }
 .user-info{
@@ -181,6 +210,24 @@
     color: var(--darkmode_text);
     text-decoration: none;
 } 
+.crossroad-mobile, .stats-mobile, .user-mobile {
+    display: none;
+}
+
+.hamburger-menu.active .crossroad-mobile, .hamburger-menu.active .stats-mobile, .hamburger-menu.active .user-mobile {
+    display: flex;
+    justify-content: center;
+}
+.nav-tile{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 100%;
+    gap: 1rem;
+}
+.nav-tile .vertical{
+    width: auto;
+}
 .welcome{
     display: flex;
     flex-direction: row;
@@ -274,10 +321,16 @@ small{
         min-height: 100vh;
     }
     .sidebar{
-        flex-direction: row;
         border: none;
         border-bottom: var(--darkmode-card-border) 3px solid;
         border-radius: 0.5rem;
+    }
+    .sidebar.vertical{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
     .top img{
         display: none;
@@ -314,7 +367,6 @@ small{
         min-height: 100vh;
     }
     .sidebar{
-        flex-direction: row;
         border: none;
         border-bottom: var(--darkmode-card-border) 3px solid;
         border-radius: 0.5rem;
