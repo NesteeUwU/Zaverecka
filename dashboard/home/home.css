@@ -14,7 +14,6 @@
     font-size: clamp(0.75rem,2vw,1rem);
     background-color: var(--darkmode_bg);
     color: var(--darkmode_text);
-    height: 100vh;
 }
 .sidebar{
     display: flex;
@@ -107,7 +106,7 @@
 .crossroad, .stats, .user, .welcome, .quote, .lesson-recap, .hamburger-menu.active .crossroad-mobile, .hamburger-menu.active .stats-mobile, .hamburger-menu.active .user-mobile {
     display: flex;
     flex-direction: column;
-    padding: clamp(1rem, 1.5vw, 1.25rem);
+    padding: clamp(0.75rem, 1.5vw, 1.25rem);
     margin: clamp(0.75rem,2vw,1rem);
     border: var(--darkmode-card-border) 3px solid;
     border-radius: 2.25rem;
@@ -139,8 +138,8 @@
 .crossroad a:hover{
     border-bottom: var(--darkmode_text) solid 2px;
 }
-.crossroad img{
-    width: clamp(0.75rem,2vw,1.5rem);
+.crossroad img, .hamburger-menu.active .crossroad-mobile img{
+    width: clamp(1rem,2vw,1.5rem);
 }
 .stats, .hamburger-menu.active .stats-mobile{
     justify-content: center;
@@ -220,7 +219,7 @@
 }
 .nav-tile{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 1rem;
     width: 100%;
     gap: 1rem;
@@ -312,6 +311,9 @@ small{
     .hamburger{
         display: none;
     }
+    .container{
+        height: 100vh;
+    }
 }
 @media(width<1440px) and (width>790px){
     .container{
@@ -359,7 +361,7 @@ small{
         width: 100%;
     }
 }
-@media(width<=790px){
+@media(width<=790px) and (width>425px){
     .container{
         display: flex;
         flex-direction: column;
@@ -398,5 +400,55 @@ small{
     }
     .lesson-recap{
         width: 100%;
+    }
+}
+@media(width<=425px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    .sidebar{
+        border: none;
+        border-bottom: var(--darkmode-card-border) 3px solid;
+        border-radius: 0.5rem;
+    }
+    .top img{
+        display: none;
+    }
+    .crossroad, .stats, .user{
+        display: none;
+    }
+    .welcome{
+        height: auto;
+        justify-content: center;
+    }
+    .greeting{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .start-lesson{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .motivation{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .lesson-recap{
+        width: 100%;
+    }
+    .nav-tile{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-tile .vertical{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
